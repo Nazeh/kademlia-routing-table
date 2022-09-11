@@ -1,10 +1,8 @@
-mod helpers;
 mod table;
 
-use crate::table::RoutingTable;
-use crate::helpers::random_id;
+use table::*;
 
-fn main() {
-    let table = RoutingTable::new(random_id());
-    println!("{:?}", table.id)
+fn main () {
+    let table = RoutingTable::new();
+    println!("Row: {:?}", table.rows[0])
 }
